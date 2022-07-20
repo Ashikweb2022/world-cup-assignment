@@ -1,3 +1,14 @@
+
+
+/*---------
+
+css stylesheet start
+
+------------*/
+/*---------
+common style and font
+------------*/
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -10,7 +21,9 @@ body{
 }
 
 
-
+/*---------
+Top bannae section start
+------------*/
 .top-bannar-section{
     background-color: black;
     width: 90%;
@@ -27,7 +40,7 @@ body{
     -o-border-radius: 15px;
 }
 .top-bannar-section span{
-    margin: 0px 10px;
+    margin: 0px 20px;
 }
 .top-desc{
     width: 50%;
@@ -55,6 +68,15 @@ body{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.btn:hover{
+    background-color: white;
+    color: black;
+    transition: 2s ease-in;
+    -webkit-transition: 2s ease-in;
+    -moz-transition: 2s ease-in;
+    -ms-transition: 2s ease-in;
+    -o-transition: 2s ease-in;
+}
 .top-image{
     width: 50%;
     text-align: center;
@@ -63,6 +85,13 @@ body{
 .top-image img{
     width: 100%;
 }
+/*---------
+Top bannae section end
+------------*/
+
+/*---------
+aside section start
+------------*/
 .main-section{
     width: 90%;
     margin: 0 auto;
@@ -93,19 +122,12 @@ body{
     align-items: center;
     padding: 20px;
 }
-.nav-item.active{
-    background-color: red;
-    color:white;
-}
-.nav-item.active a{
-    color: white;
-}
 .nav-item{
     width: 100%;
     height: 80px;
     background-color: aliceblue;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
     text-align: center;
     -webkit-border-radius: 10px;
@@ -113,11 +135,26 @@ body{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+.nav-item.active{
+    background-color: red;
+    color:white;
+}
+.nav-item.active a{
+    color: white;
+}
+
 .nav-item a{
     text-decoration: none;
     font-size: 25px;
 }
+/*---------
+asidde section end
+------------*/
 
+
+/*---------
+blogs  section start
+------------*/
 .grid-container{
     width: 75%;
     display: grid;
@@ -139,7 +176,7 @@ body{
 }
 .blog button{
     margin: 10px 0px;
-    padding: 0px 10px;
+    padding: 5px 20px;
 }
 .blog h2{
     font-size: 15px;
@@ -154,7 +191,12 @@ body{
     margin: 5px;
 }
 
-
+/*---------
+blogs  section end
+-----------*/
+/*---------
+upcomming match section star
+t------------*/
 
 
 .match{
@@ -195,6 +237,14 @@ body{
     margin: 5px 0px;
     font-size: 14px;
 }
+/*---------
+upcomming match section end
+------------*/
+/*---------
+Group section start
+------------*/
+
+
 .group{
     width: 100%;
     border-radius: 10px;
@@ -238,6 +288,15 @@ body{
  -ms-transition: 2s;
  -o-transition: 2s;
 }
+
+/*---------
+group section end
+------------*/
+/*---------
+all view button start
+------------*/
+
+
 .view-section{
     width: 90%;
     height: 300px;
@@ -257,6 +316,14 @@ body{
     -ms-transform: translate(50% 50%);
     -o-transform: translate(50% 50%);
 }
+/*---------
+all view button end
+------------*/
+/*---------
+footer section start
+------------*/
+
+
 .footer-section{
     width: 100%;
     padding: 30px;
@@ -312,10 +379,23 @@ body{
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
 }
+
+/*---------
+footer section end
+------------*/
+
+/*---------
+media quirey start
+------------*/
+/*--------
+For mobile divice-
+-----------*/
 @media  only screen and (max-width: 600px) {
     .top-bannar-section{
        flex-direction: column;
-    
+       width: 80%;
+       padding: 20px;
+      
     }
     .top-desc{
         width: 100%;
@@ -329,7 +409,12 @@ body{
     }
     .top-image{
         width: 100%;
-S
+
+    }
+    .top-para{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .main-section{
         flex-direction: column;
@@ -339,8 +424,15 @@ S
         background-color: white;
     }
     .grid-container{
-        width: 100%;
+        width: 80%;
         grid-template-columns: auto;
+        margin: 20px;
+        box-sizing: border-box;
+    }
+    .grid-item{
+        width: 100%;
+        padding: 10px;
+
     }
     .footer-bottom{
         flex-direction: column;
@@ -348,13 +440,20 @@ S
         align-items: center;
     }
 }
+/*---------
+For tablet
+------------*/
 
 
 @media  only screen and (min-width: 601px) and (max-width:991px){
     .top-image img{
         width: 100%;
-        padding: 0px;
 
+
+    }
+    .top-desc{
+        margin: 20px;
+        padding: 20px;
     }
     .main-section{
         flex-direction: column;
@@ -365,28 +464,41 @@ S
         justify-content: space-between;
     }
     .navigation-container{
-        width: 90%;
+        width: 80%;
         background-color: white;
         height: auto;
     }
     .nav-item{
         border: 2px solid blanchedalmond; 
-    padding: 5px;   }
+        padding: 5px;   }
      
     
 
     .grid-container{
-        width: 90%;
+        width: 80%;
+        margin: 0 auto;
         grid-template-columns: auto auto;
     }
     .view-section{
         display: block;
+        text-align: center;
     }
 
 }
+
+/*---------
+For Decktop
+------------*/
 @media  only screen and (min-width: 992px){
 
 }
+/*---------
+media quirey End
+------------*/
+
+/*---------
+css stylesheet end
+------------*/
 
 
 
