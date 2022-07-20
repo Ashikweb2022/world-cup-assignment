@@ -119,7 +119,7 @@ body{
     box-sizing: border-box;
     
 }
-.blog{
+.grid-item{
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -177,6 +177,49 @@ body{
 .match-timing p{
     margin: 5px 0px;
     font-size: 14px;
+}
+.group{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.group-heading{
+    background-color: tomato;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.group ul{
+    text-align: left;
+    margin: 5px;
+    padding: 5px;
+}
+.group ul li{
+    list-style-type:none;
+    background-color: brown;
+    margin: 5px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.group ul li:hover{
+ background-color:rgba(165, 42, 42, .2);
+ transition: 2s;
+ -webkit-transition: 2s;
+ -moz-transition: 2s;
+ -ms-transition: 2s;
+ -o-transition: 2s;
 }
 .view-section{
     width: 90%;
@@ -246,7 +289,7 @@ body{
     }
     .top-image{
         width: 100%;
-        padding: 10px;
+S
     }
     .main-section{
         flex-direction: column;
@@ -268,6 +311,11 @@ body{
 
 
 @media  only screen and (min-width: 601px) and (max-width:991px){
+    .top-image img{
+        width: 100%;
+        padding: 0px;
+
+    }
     .main-section{
         flex-direction: column;
     
