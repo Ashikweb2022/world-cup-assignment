@@ -73,6 +73,7 @@ body{
     background-color: black;
     border-radius: 10px;
     width: 25%;
+    box-sizing: border-box;
     margin-right: 15px;
     height: 400px;
     -webkit-border-radius: 10px;
@@ -109,12 +110,13 @@ body{
     font-size: 25px;
 }
 
-.blogs-container{
+.grid-container{
     width: 75%;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    box-sizing: border-box;
     
 }
 .blog{
@@ -135,20 +137,62 @@ body{
     font-size: 15px;
     margin: 10px 0px;
 }
+
+
+
+.match{
+    display: flex;
+    flex-direction: column;
+     border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.match img{
+    width: 100%;
+}
+.flag-showing{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+} 
+
+.flag-showing div, h2{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.match-timing{
+    text-align: center;
+    margin:5px;
+    padding: 5px;
+}
+.match-timing h2{
+    font-size: 18px;
+}
+.match-timing p{
+    margin: 5px 0px;
+    font-size: 14px;
+}
 .view-section{
     width: 90%;
     height: 300px;
     margin: 0 auto;
     text-align: center;
     position: relative;
+    display: none;
 }
 .view-section button{
     border: none;
     position:absolute;
-    top: 50px;
-    left: 50px;
+    top: 50%;
+    left: 50%;
     transform: translate(50% 50%);
-    -webkit-transform: translate(50% 50%);
+    -webkit-transform: translate(-50% -50%);
     -moz-transform: translate(50% 50%);
     -ms-transform: translate(50% 50%);
     -o-transform: translate(50% 50%);
@@ -211,14 +255,19 @@ body{
         width: 100%;
         background-color: white;
     }
-    .blogs-container{
+    .grid-container{
         width: 100%;
         grid-template-columns: auto;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 
-@media  only screen and (min-width: 768px){
+@media  only screen and (min-width: 601px) and (max-width:991px){
     .main-section{
         flex-direction: column;
     
@@ -238,9 +287,12 @@ body{
      
     
 
-    .blogs-container{
+    .grid-container{
         width: 90%;
         grid-template-columns: auto auto;
+    }
+    .view-section{
+        display: block;
     }
 
 }
